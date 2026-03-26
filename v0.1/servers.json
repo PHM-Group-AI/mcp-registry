@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "atlassian-suite": {
+      "url": "https://mcp.atlassian.com/v1/mcp"    },    "ms-fabric": {
+      "url": "https://api.fabric.microsoft.com/v1/mcp"    },    "powerbi-modeling": {
+      "command": "npx",
+      "args": ["-y", "@microsoft/powerbi-modeling-mcp"]
+    }
+  }
+}
