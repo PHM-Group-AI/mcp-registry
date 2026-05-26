@@ -1,17 +1,51 @@
 {
-  "servers": {
-    "atlassian": {
-      "type": "http",
-      "url": "https://mcp.atlassian.com/v1/mcp"
+  "servers": [
+    {
+      "server": {
+        "name": "ai.phm-group/atlassian",
+        "title": "Atlassian",
+        "description": "Atlassian MCP server",
+        "version": "1.1.1",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.atlassian.com/v1/mcp"
+          }
+        ]
+      }
     },
-    "ms-fabric": {
-      "type": "http",
-      "url": "https://api.fabric.microsoft.com/v1/mcp"
+    {
+      "server": {
+        "name": "ai.phm-group/ms-fabric",
+        "title": "Microsoft Fabric",
+        "description": "Microsoft Fabric MCP server",
+        "version": "1.0.0",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.fabric.microsoft.com/v1/mcp"
+          }
+        ]
+      }
     },
-    "powerbi-modeling": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@microsoft/powerbi-modeling-mcp"]
+    {
+      "server": {
+        "name": "ai.phm-group/powerbi-modeling",
+        "title": "Power BI Modeling",
+        "description": "Power BI modeling MCP server",
+        "version": "0.5.0-beta.8",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@microsoft/powerbi-modeling-mcp",
+            "version": "0.5.0-beta.8",
+            "transport": {
+              "type": "stdio"
+            }
+          }
+        ]
+      }
     }
-  }
+  ]
 }
+ 
